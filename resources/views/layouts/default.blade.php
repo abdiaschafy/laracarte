@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Laracarte</title>
+	<title>
+    	{{ page_title($title ?? '') }}
+    </title>
 </head>
 <body>
 	@yield('content')
@@ -19,7 +21,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    <title>Laracarte</title>
 </head>
 <body class="container" style="padding-top:60px ">
 	@include('layouts.partials._nav')
