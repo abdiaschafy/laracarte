@@ -1,6 +1,6 @@
-@extends('layouts.default', ['title' => 'About'])
+@extends('layouts.default')
 
-
+@section('title','About')
 @section('content')
     <div class="container">
     	<h1>What is {{ config('app.name') }}?</h1>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>
-    	{{ page_title($title ?? '') }}
+    	@yield('title')
     </title>
 </head>
 <body>
