@@ -26,7 +26,7 @@
                 <li><a href="#">larachat</a></li>
               </ul>
             </li>
-            <li><a href="{{ set_active_route('contact_path') }}">Contact</a></li>
+            <li class="{{ set_active_route('contact_path') }}"><a href="{{ route('contact_path') }}">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">Connexion</a></li>

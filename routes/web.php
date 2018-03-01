@@ -31,5 +31,5 @@ Route::get('/about', [
 Route::get('/contact', [
 
 	'as' => 'contact_path',
-	'uses' => 'PagesController@contact'
+	'uses' => 'ContactsController@contact'
 ]);
