@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactMessageCreated;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +42,9 @@ Route::post('/contact', [
 	'as' => 'contact_path',
 	'uses' => 'ContactsController@valid'
 ]);
+
+
+Route::get('/test-email', function() {
+
+	return new ContactMessageCreated('Abdias Chafang', 'abdiaschafang@gmail.com', 'merci pour ce tuto');
+});
