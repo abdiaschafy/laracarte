@@ -17,6 +17,7 @@ class ContactsController extends Controller
 
     public function valid(ContactRequest $request){
 
+
     	$message = Message::create($request->only('name', 'email', 'message'));
 
     	$mailable = new ContactMessageCreated($message);
