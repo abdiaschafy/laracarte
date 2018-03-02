@@ -8,22 +8,25 @@
 			<h2>Get In Touch</h2>
 			<p class="text-muted">If you having trouble with this service, please <a href="mailto:abdiaschafang@gmailcom">ask for help</a>.</p>
 
-			<form method="POST" action="/contact">
-
-	            <div class="form-group ">
+			<form method="POST" action="{{ route('contact_path') }}">
+				{{ csrf_field() }}
+	            <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
 	                <label class="control-label">Name</label>
-	                <input type="text" name="name" id="name" class="form-control" value="" required="required">
+	                <input type="text" name="name" id="name" class="form-control" value="" " required="required">
+	                {!! $errors->first('name', '<span class="text-danger">:message</span>') !!}
 	            </div>
 
-	            <div class="form-group ">
+	            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
 	                <label class="control-label">Email</label>
-	                <input type="email" name="email" value="" class="form-control" required="required">
+	                <input type="email" name="email" value="" class="form-control" " required="required">
+	                {!! $errors->first('email', '<span class="text-danger">:message</span>') !!}
 	            </div>
 
 
-	            <div class="form-group ">
+	            <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
 	            	<label class="control-label sr-only" for="message">Message</label>
 	                <textarea class="form-control" name="message" rows="10" cols="10" required="required"></textarea>
+	                {!! $errors->first('message', '<span class="text-danger">:message</span>') !!}
 	            </div>
 
 	            <div class="form-group">

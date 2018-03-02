@@ -33,3 +33,10 @@ Route::get('/contact', [
 	'as' => 'contact_path',
 	'uses' => 'ContactsController@contact'
 ]);
+
+
+Route::post('/contact', [
+
+	'as' => 'contact_path',
+	'uses' => 'ContactsController@valid'
+]);
