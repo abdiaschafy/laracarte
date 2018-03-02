@@ -1,16 +1,16 @@
 @component('mail::message')
 # Introduction
 
-{{ $name }}
+{{ $msg->name }}
 
-{{ $email }}
+{{ $msg->email }}
 
 @component('mail::button', ['url' => ''])
 Button Text
 @endcomponent
 
 @component('mail::panel')
-	{{ $msg }}
+	{{ $msg->msg }}
 @endcomponent
 
 Thanks,<br>
