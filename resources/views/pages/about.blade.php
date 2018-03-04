@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
     	<h1>What is {{ config('app.name') }}?</h1>
-    	<p>{{ config('app.name') }} is a clone app of <a href="" title="">Laramap.com.</a></p>
+    	<p>{{ config('app.name') }} is a clone app of <a href="" title="">myhouse.com</a>.</p>
 
     	<div class="row">
     		<div class="col-md-6">

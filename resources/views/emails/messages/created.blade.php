@@ -1,16 +1,18 @@
 @component('mail::message')
-# Introduction
+# Merci de nous avoir écrit nous vous répondrons dans de brefs délais.
 
 {{ $msg->name }}
 
 {{ $msg->email }}
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
 
 @component('mail::panel')
-	{{ $msg->msg }}
+	{{ $msg->message }}
+@endcomponent
+
+
+@component('mail::button', ['url' => ''])
+Répondre
 @endcomponent
 
 Thanks,<br>
